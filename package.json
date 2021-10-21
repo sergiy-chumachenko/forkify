@@ -1,0 +1,26 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiy-chumachenko/forkify.git"
+  },
+  "keywords": [
+    "forkify"
+  ],
+  "author": "Sergiy Chumachenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiy-chumachenko/forkify/issues"
+  },
+  "homepage": "https://github.com/sergiy-chumachenko/forkify#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0",
+    "parcel": "^2.0.0-rc.0"
+  }
+}
