@@ -99,7 +99,6 @@ class RecipeView {
     `;
   }
   #generateMarkupIngredient(ing) {
-    console.log(ing);
     return `
         <li class="recipe__ingredient">
           <svg class="recipe__icon">
@@ -127,5 +126,4 @@ class RecipeView {
     this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 }
-
 export default new RecipeView();
