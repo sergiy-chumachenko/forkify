@@ -1,6 +1,16 @@
 import icons from 'url:../../img/icons.svg';
 export default class View {
   _data;
+
+  /**
+   * Render the received object to the DOM
+   * @param {Object | Object[]} data the data to be rendered (e.g. recipe)
+   * @param {boolean} [render=true] if false - create markup string instead of rendering to the DOM
+   * @returns {undefined | string} A markup string is returned if render = false
+   * @this {Object} View instance
+   * @author Sergiy Chumachenko
+   * @todo Finish implementation
+   */
   render(data, render = true) {
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
@@ -36,6 +46,9 @@ export default class View {
     });
   }
 
+  /**
+   * Render spinner
+   */
   renderSpinner() {
     this._clear();
     const markup = `
@@ -47,6 +60,11 @@ export default class View {
       `;
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
+
+  /**
+   * Render error message
+   * @param {string} message render
+   */
   renderError(message = this._errorMessage) {
     this._clear();
     const markup = `
